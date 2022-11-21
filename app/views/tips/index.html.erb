@@ -1,20 +1,20 @@
 <h1>Tips</h1>
 
-
-<%= tip.content %>
-<%= tip.author %>
-<%= tip.comment %>
-
 <div class="cards">
   <% @tips.each do |tip| %>
     <div class="card-category">
-      <%= tip.content %>
-      <%= tip.author %>
-      <%= tip.comment %>
-        <p>
-          <%= link_to "Show this tip", tip %>
-        </p>
-  </div>
+      <%= link_to tip  do %>
+      <div class="card-top">
+        <%= tip.title %>
+      </div>
+        <% end %>
+          <div class="content">
+          <%= tip.content %>
+          </div>
+        <div class="card-footer">
+          <%= tip.author %>
+        </div>
+    </div>
   <% end %>
 </div>
-<%= link_to "New tip", new_tip_path %>
+<%# <%= link_to "New tip", new_tip_path, class:"btn btn-primary" %>

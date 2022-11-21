@@ -1,6 +1,6 @@
 body {
   background-color: rgb(212, 235, 235);
-  color: #1b05b3;
+  color: #0568b3;
 }
 h1 {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -20,6 +20,7 @@ h1 {
   padding-bottom: 2rem;
   /* margin-left: 10vh;
   margin-right: 8vh; */
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
 }
 @keyframes scale {
   100% {

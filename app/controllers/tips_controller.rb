@@ -65,6 +65,6 @@ class TipsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tip_params
-      params.require(:tip).permit(:content, :author, :comment)
+      params.require(:tip).permit(:content, :author, :title)
     end
 end
