@@ -36,8 +36,10 @@
 }
 .content {
   display: flex;
+  align-items: center;
   text-align: center;
   justify-content: center;
+  height: 80%;
 }
 // .card-title {
 //   height: 50%;
