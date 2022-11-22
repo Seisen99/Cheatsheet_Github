@@ -7,7 +7,10 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
+    <form  action="tips" class="search-bar">
+      <input class="form-control me-2" title="query" type="search" placeholder="Doesn't work yet" name="query" aria-label="Search" value="<%= params[:query] %>">
+      <button class="btn btn-primary my-2 my-sm-0" style="background-color: blue" type="submit">Search</button>
+    </form>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>

@@ -1,6 +1,6 @@
 class TipsController < ApplicationController
   before_action :set_tip, only: %i[ show edit update destroy ]
-
+  before_action :search_tip, only: %i[index show]
   # GET /tips or /tips.json
   def index
     @tips = Tip.all
@@ -67,4 +67,14 @@ class TipsController < ApplicationController
     def tip_params
       params.require(:tip).permit(:content, :author, :title)
     end
+end
+
+
+def search_tip
+
+    @query = params[:query]
+    @tips = Tip.search_by_title_and_synopsis(params[:query])
+    # Preventing SQL Injection and Database error for
+    # unknown characters
+
 end
