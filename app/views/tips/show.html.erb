@@ -1,8 +1,14 @@
-<%= render @tip %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+  <%= render @tip %>
 
-<div>
-  <%= link_to "Edit this tip", edit_tip_path(@tip) %> |
-  <%= link_to "Back to tips", tips_path %>
+  </div>
+</div>
 
-  <%= button_to "Destroy this tip", @tip, method: :delete %>
+<div class="buttonse">
+  <%= link_to "Edit this tip", edit_tip_path(@tip), class:"btn btn-primary" %>
+  <%= link_to "Back to tips", tips_path, class:"btn btn-primary" %>
+  <%= link_to "Destroy this tip", @tip, data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this film from your list ?"}, class:"btn btn-warning" %>
+</div>
 </div>
